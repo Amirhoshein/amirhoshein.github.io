@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HSH MC</title>
+<title>HashishCraft</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
@@ -27,8 +27,9 @@ a{color:inherit}
   radial-gradient(2px 2px at 58% 26%,#fff7,transparent),radial-gradient(2px 2px at 81% 12%,#fff9,transparent),
   radial-gradient(2px 2px at 92% 34%,#fff6,transparent),radial-gradient(2px 2px at 70% 5%,#fff8,transparent)}
 .wrap{position:relative;max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
-h1{font-family:'Silkscreen',monospace;font-weight:700;font-size:clamp(44px,8vw,84px);line-height:1.05;letter-spacing:2px;direction:ltr;text-align:right;
+h1{font-family:'Silkscreen',monospace;font-weight:700;font-size:clamp(38px,8vw,76px);white-space:nowrap;line-height:1.05;letter-spacing:2px;direction:ltr;text-align:right;
    color:var(--lantern);text-shadow:4px 4px 0 #7a3b2a,8px 8px 0 #2a1238}
+h1 span{display:block;color:#fff3d6}
 .lead{margin-top:18px;font-size:18px;color:#e8dff7;max-width:30em}
 .ip{margin-top:26px;display:inline-flex;align-items:stretch;border:3px solid var(--lantern);background:#0f0c22cc;cursor:pointer;font:inherit;color:var(--text)}
 .ip span{padding:10px 18px;direction:ltr;font-family:'Silkscreen',monospace;font-size:20px}
@@ -55,8 +56,6 @@ h1{font-family:'Silkscreen',monospace;font-weight:700;font-size:clamp(44px,8vw,8
 section.s{max-width:1080px;margin:0 auto;padding:64px 20px 0}
 h2{font-size:28px;font-weight:800;margin-bottom:6px}
 .sub{color:var(--muted);margin-bottom:24px}
-.ranks{display:flex;flex-wrap:wrap;gap:12px}
-.rk{direction:ltr;font-family:'Silkscreen',monospace;font-weight:700;font-size:15px;padding:10px 16px;background:var(--slate);border:3px solid var(--line);border-inline-start-width:8px}
 .steps{list-style:none;padding:0;counter-reset:s;display:grid;gap:12px;max-width:640px}
 .steps li{counter-increment:s;display:flex;gap:16px;align-items:center;background:var(--slate);border:3px solid var(--line);padding:14px 18px}
 .steps li::before{content:counter(s);font-family:'Silkscreen',monospace;background:var(--lantern);color:#2a1238;min-width:36px;height:36px;display:grid;place-items:center;font-weight:700}
@@ -77,9 +76,9 @@ footer.f{margin-top:72px;padding:28px 20px;text-align:center;color:var(--muted);
   <div class="stars"></div>
   <div class="wrap">
     <div>
-      <h1 id="name">HSH MC</h1>
-      <p class="lead">سرور ماینکرفت فارسی با اسکای‌بلاک، اقتصاد، اسپاونر و رنک‌های اختصاصی. وصل شو و با بقیه بازی کن.</p>
-      <button class="ip" id="ipbtn" aria-label="کپی آدرس سرور"><span id="ip">play.hshmc.ir</span><b>کپی</b></button>
+      <h1 id="name">Hashish<span>Craft</span></h1>
+      <p class="lead">به سرور ماینکرفت حشیش‌کرفت خوش اومدی. وصل شو و با بقیه بازی کن.</p>
+      <button class="ip" id="ipbtn" aria-label="کپی آدرس سرور"><span id="ip">hshmc.ir</span><b>کپی</b></button>
       <p class="ver" id="ver"></p>
     </div>
 
@@ -98,43 +97,35 @@ footer.f{margin-top:72px;padding:28px 20px;text-align:center;color:var(--muted);
 </div>
 
 <section class="s">
-  <h2>رنک‌های سرور</h2>
-  <p class="sub">هر رنک پیشوند اختصاصی خودش رو تو چت و تب‌لیست داره.</p>
-  <div class="ranks" id="ranks"></div>
-</section>
-
-<section class="s">
   <h2>چطور وصل بشم؟</h2>
-  <p class="sub">سه قدم تا ورود به سرور:</p>
+  <p class="sub">چهار قدم تا شروع بازی:</p>
   <ol class="steps">
-    <li>ماینکرفت رو باز کن و روی <b>Multiplayer</b> بزن.</li>
-    <li>روی <b>Add Server</b> بزن و آدرس <code id="ip2">play.hshmc.ir</code> رو بذار.</li>
-    <li>سرور رو انتخاب کن و <b>Join Server</b> رو بزن.</li>
+    <li><span>ماینکرفت رو باز کن و روی <b>Multiplayer</b> بزن.</span></li>
+    <li><span>روی <b>Add Server</b> بزن و آدرس <code id="ip2">hshmc.ir</code> رو بذار، بعد <b>Join Server</b>.</span></li>
+    <li><span>اولین بار باید ثبت‌نام کنی: <code>/register pass passAgain</code></span></li>
+    <li><span>دفعه‌های بعد برای ورود: <code>/login pass</code></span></li>
   </ol>
+  <p class="sub" style="margin-top:14px">به‌جای <code>pass</code> رمز دلخواهت رو بنویس و <code>passAgain</code> همون رمز رو دوباره تکرار کن. رمزت رو فراموش نکن!</p>
 </section>
 
 <section class="s">
-  <h2>با ما در ارتباط باش</h2>
-  <p class="sub">خبرها، قرعه‌کشی‌ها و پشتیبانی تو دیسکورد.</p>
-  <div class="links"><a class="btn" id="discord" href="#">دیسکورد</a></div>
+  <h2>کانال تلگرام</h2>
+  <p class="sub">خبرها و اطلاعیه‌های سرور رو تو کانال تلگرام دنبال کن.</p>
+  <div class="links"><a class="btn" id="tg" href="#" target="_blank" rel="noopener">@hashishcraft</a></div>
 </section>
 
-<footer class="f">© <span id="y"></span> <span id="fn">HSH MC</span></footer>
+<footer class="f">© <span id="y"></span> <span id="fn">HashishCraft</span></footer>
 <div id="toast" role="status">آدرس کپی شد</div>
 
 <script>
 /* ===== تنظیمات: اینجا رو عوض کن ===== */
 const CONFIG = {
-  name: 'HSH MC',
-  ip: 'play.hshmc.ir',
+  name: 'HashishCraft',
+  ip: 'hshmc.ir',
   version: 'Java 1.21.11',
-  discord: '#',
-  api: 'http://p.hshmc.ir:1095/',   // خروجی %online_ranks%
-  refreshSec: 15,
-  ranks: [
-    ['DEV','#AA0000'],['ADMIN','#AA0000'],['GOD','#FFAA00'],['KING','#FF5555'],['KNIGHT','#5555FF'],
-    ['HELPER','#55FF55'],['BUILDER','#00AAAA'],['Femboy','#FF55FF'],['VIP','#55FF55'],['MEMBER','#555555']
-  ]
+  telegram: 'https://t.me/hashishcraft',
+  api: 'https://p.hshmc.ir:1095/online',   // سرور https اسکریپت روی پورت 1095
+  refreshSec: 15
 };
 /* ==================================== */
 
@@ -242,14 +233,11 @@ function copyIp(){
 
 /* init */
 document.title = CONFIG.name;
-$('name').textContent = CONFIG.name; $('fn').textContent = CONFIG.name;
+$('fn').textContent = CONFIG.name;
 $('ip').textContent = CONFIG.ip; $('ip2').textContent = CONFIG.ip;
 $('ver').textContent = 'نسخه: ' + CONFIG.version;
-$('discord').href = CONFIG.discord; $('y').textContent = new Date().getFullYear();
+$('tg').href = CONFIG.telegram; $('y').textContent = new Date().getFullYear();
 $('ipbtn').addEventListener('click', copyIp);
-CONFIG.ranks.forEach(([n,c]) => {
-  const d=document.createElement('div'); d.className='rk'; d.textContent=n; d.style.color=c; d.style.borderInlineStartColor=c; $('ranks').appendChild(d);
-});
 load(); setInterval(load, CONFIG.refreshSec*1000);
 </script>
 </body>
